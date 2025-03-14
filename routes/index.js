@@ -9,11 +9,10 @@ router.get('/', (req, res) => {
       } else {
         res.render('pages/home',{username: req.session.user,title: 'Home'});
     }
-    
-
-
-   
+      
 });
+
+
 
 
 module.exports = router;

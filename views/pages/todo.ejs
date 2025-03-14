@@ -1,0 +1,51 @@
+<h1>Member Todo</h1>
+<div class="container">
+  <h1>list mahasiswa</h1>
+
+  <a
+    href="/todo/add"
+    class="btn btn-primary btn-lg active mb-2"
+    role="button"
+    aria-pressed="true"
+    >Tambah Data</a
+  >
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nama</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% members.forEach(m => { %>
+      <tr>
+        <td><%= m.name %></td>
+        <td><%= m.email %></td>
+        <td><%= m.password %></td>
+        <td>
+          <a href="/todo/edit/<%= m._id %>" class="btn btn-success badge"
+            >Edit</a
+          >
+          <a href="/todo/delete/<%= m._id %>" class="btn btn-danger badge"
+            >Delete</a
+          >
+
+          <!-- <form action="/contact/delete" method="post" class="d-inline">
+                  <input type="hidden" name="id" value="<%= m._id %>" />
+                  <button
+                    type="submit"
+                    class="btn btn-danger badge"
+                    onclick="return confirm('Yakin Akan Dihapus ?')"
+                  >
+                    delete
+                  </button>
+                </form> -->
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>

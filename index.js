@@ -20,6 +20,9 @@ app.use(bodyParser.urlencoded(
     {extended: true}
 ));
 
+//connect to mongodb
+require('./config/config');
+
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
@@ -36,6 +39,9 @@ app.use('/auth', auth);
 
 const index = require('./routes/index');
 app.use('/', index);
+
+const todo = require('./routes/todo');
+app.use('/todo', todo);
 
 
 
