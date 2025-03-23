@@ -4,6 +4,10 @@ const app = express();
 const bodyParser = require('body-parser');
 const session = require('express-session');
 
+const path = require('path');
+app.set('views', path.join(__dirname, 'views'));
+
+
 const layouts = require('express-ejs-layouts');
 app.use(layouts);
 
