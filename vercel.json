@@ -2,5 +2,5 @@
     "version": 2,
     "name": "nodejsejs2025",
     "builds": [{ "src": "index.js", "use": "@vercel/node" }],
-    "routes": [{ "src": "/(.*)", "dest": "/" }]
+    "routes": [{ "src": "/(.*)", "dest": "/index.js" }]
 }
