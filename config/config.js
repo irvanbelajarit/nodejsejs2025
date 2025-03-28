@@ -1,10 +1,7 @@
 const monggose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config();
-// monggose.connect('mongodb://localhost:27017/db-untar-cafe2', {
-    
-  
-// });
+
 monggose.connect(process.env.MONGGO_URL, {
     
   
